@@ -35,7 +35,7 @@ Resources:
     Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: SG demo - permite HTTP
-      VpcId: vpc-xxxxxxxx # ← reemplazar por tu VPC
+      VpcId: vpc-0e0f2276d09c083ba
       SecurityGroupIngress:
         - IpProtocol: tcp
           FromPort: 8080
@@ -46,7 +46,7 @@ Resources:
     Type: AWS::EC2::Instance
     Properties:
       IamInstanceProfile: !Ref InstanceProfile
-      ImageId: ami-xxxxxxxx # Amazon Linux 2 actual en tu región
+      ImageId: ami-0b016c703b95ecbe4
       InstanceType: !Ref InstanceType
       KeyName: !Ref KeyName
       SecurityGroupIds:
